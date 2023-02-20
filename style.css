@@ -11,3 +11,17 @@ body {
     align-items: center;
     gap: 45px;
 }
+h1 {
+    letter-spacing: 3px;
+}
+.scores {
+    display: flex;
+    gap: 20px;
+}
+.scores p {
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #FFEA00;
+}
