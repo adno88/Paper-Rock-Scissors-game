@@ -16,6 +16,7 @@ h1 {
 }
 .scores {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 .scores p {
@@ -24,4 +25,19 @@ h1 {
     padding: 10px;
     font-size: 24px;
     background-color: #FFEA00;
+}
+.scores span {
+    font-size: 32px;
+}
+.images button {
+    border: none;
+}
+.choices p {
+    font-size: 32px;
+}
+.game-result {
+    font-size: 32px;
+    background-color: greenyellow;
+    width: 40%;
+    border-radius: 15px;
 }
