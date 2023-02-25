@@ -35,6 +35,12 @@ h1 {
 button {
     cursor: pointer;
 }
+.choices {
+    display: none;
+}
+.choices.active {
+    display: block;
+}
 .choices p {
     font-size: 32px;
 }
@@ -44,6 +50,10 @@ button {
     width: 40%;
     border-radius: 15px;
     text-align: center;
+    display: none;
+}
+.game-result.active {
+    display: block;
 }
 .reset-game {
     background-color: gray;
@@ -52,6 +62,10 @@ button {
     border: none;
     border-radius: 15px;
     transition: all 0.3s ease-in-out;
+    display: none;
+}
+.reset-game.active {
+    display: block;
 }
 .reset-game:hover {
     opacity: 0.5;
