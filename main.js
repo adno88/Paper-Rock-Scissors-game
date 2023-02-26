@@ -14,6 +14,7 @@ let computerChoice = '';
 function startGame() {
     pPoints.innerHTML = playerPoints;
     cPoints.innerHTML = computerPoints;
+    result.innerHTML = 'Chose your hand signal';
 }
 
 window.onload = startGame();

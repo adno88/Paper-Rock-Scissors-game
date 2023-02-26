@@ -46,11 +46,9 @@ button {
 }
 .game-result {
     font-size: 32px;
-    background-color: greenyellow;
     width: 40%;
     border-radius: 15px;
     text-align: center;
-    display: none;
 }
 .game-result.active {
     display: block;
