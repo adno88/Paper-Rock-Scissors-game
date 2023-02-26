@@ -32,6 +32,9 @@ h1 {
 .images button {
     border: none;
 }
+.images button img {
+    pointer-events: none;
+}
 button {
     cursor: pointer;
 }

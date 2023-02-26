@@ -18,3 +18,10 @@ function startGame() {
 }
 
 window.onload = startGame();
+
+function pSelect(event) {
+    playerChoice = event.target.dataset.option;
+}
+
+buttons.forEach(button => button.addEventListener('click', pSelect)
+);
