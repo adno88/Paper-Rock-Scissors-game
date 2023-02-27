@@ -32,6 +32,9 @@ h1 {
 .images button {
     border: none;
 }
+.images button.active {
+    transform: scale(1.2);
+}
 .images button img {
     pointer-events: none;
 }

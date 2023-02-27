@@ -20,8 +20,11 @@ function startGame() {
 window.onload = startGame();
 
 function pSelect(event) {
+    buttons.forEach((button) => button.classList.remove("active"))
     playerChoice = event.target.dataset.option;
+    event.target.classList.add("active");
 }
 
-buttons.forEach(button => button.addEventListener('click', pSelect)
+buttons.forEach(button => 
+    button.addEventListener('click', pSelect)
 );
