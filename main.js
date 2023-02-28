@@ -23,6 +23,15 @@ function pSelect(event) {
     buttons.forEach((button) => button.classList.remove("active"))
     playerChoice = event.target.dataset.option;
     event.target.classList.add("active");
+
+    cSelect();
+}
+
+const cSignal = ['rock','paper','scissors'];
+
+function cSelect() {
+    const randomSignal = Math.floor(Math.random() * cSignal.length);
+    console.log(randomSignal);
 }
 
 buttons.forEach(button => 
