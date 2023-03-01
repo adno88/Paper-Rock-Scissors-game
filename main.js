@@ -32,6 +32,22 @@ const cSignal = ['rock','paper','scissors'];
 function cSelect() {
     const randomSignal = Math.floor(Math.random() * cSignal.length);
     console.log(randomSignal);
+
+    showResult()
+}
+
+function showResult () {
+    let win = '';
+
+    if((playerChoice === 'rock' && computerChoice === 'scissors') || (playerChoice === 'paper' && computerChoice === 'rock') || (playerChoice === 'scissors' && computerChoice === 'paper')) {
+        win = 'You Win';
+    } 
+    else if (playerChoice === computerChoice) {
+        win='Draw';
+    }
+    else {
+        win = 'You Lose';
+    }
 }
 
 buttons.forEach(button => 
