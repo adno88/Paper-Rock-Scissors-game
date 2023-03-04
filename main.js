@@ -41,12 +41,14 @@ function showResult () {
 
     if((playerChoice === 'rock' && computerChoice === 'scissors') || (playerChoice === 'paper' && computerChoice === 'rock') || (playerChoice === 'scissors' && computerChoice === 'paper')) {
         win = 'You Win';
+        playerPoints++;
     } 
     else if (playerChoice === computerChoice) {
         win='Draw';
     }
     else {
         win = 'You Lose';
+        computerPoints++;
     }
 }
 
