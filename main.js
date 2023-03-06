@@ -24,6 +24,8 @@ function pSelect(event) {
     playerChoice = event.target.dataset.option;
     event.target.classList.add("active");
 
+    console.log('player choice: ', playerChoice);
+
     cSelect();
 }
 
@@ -31,25 +33,29 @@ const cSignal = ['rock','paper','scissors'];
 
 function cSelect() {
     const randomSignal = Math.floor(Math.random() * cSignal.length);
-    console.log(randomSignal);
+    computerChoice = cSignal[randomSignal];
+    console.log('computer choice: ', computerChoice);
 
-    showResult()
+    showResult();
 }
 
-function showResult () {
+function showResult() {
     let win = '';
 
     if((playerChoice === 'rock' && computerChoice === 'scissors') || (playerChoice === 'paper' && computerChoice === 'rock') || (playerChoice === 'scissors' && computerChoice === 'paper')) {
         win = 'You Win';
         playerPoints++;
-    } 
+        pPoints.innerHTML = playerPoints;
+    }
     else if (playerChoice === computerChoice) {
         win='Draw';
     }
     else {
         win = 'You Lose';
         computerPoints++;
+        cPoints.innerHTML = computerPoints;
     }
+    console.log(win);
 }
 
 buttons.forEach(button => 
