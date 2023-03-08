@@ -59,7 +59,7 @@ function showResult() {
     choices.classList.add('active');
     pChoice.innerHTML = playerChoice;
     cChoice.innerHTML = computerChoice;
-    console.log(win);
+    result.innerHTML = win;
 }
 
 buttons.forEach(button => 
