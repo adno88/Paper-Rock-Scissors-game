@@ -16,6 +16,8 @@ function startGame() {
     pPoints.innerHTML = playerPoints;
     cPoints.innerHTML = computerPoints;
     result.innerHTML = 'Chose your hand signal';
+    
+    resetGame.classList.remove('active');
 }
 
 window.onload = startGame();
@@ -25,7 +27,7 @@ function pSelect(event) {
     playerChoice = event.target.dataset.option;
     event.target.classList.add("active");
 
-    console.log('player choice: ', playerChoice);
+    resetGame.classList.add('active');
 
     cSelect();
 }
@@ -35,7 +37,6 @@ const cSignal = ['rock','paper','scissors'];
 function cSelect() {
     const randomSignal = Math.floor(Math.random() * cSignal.length);
     computerChoice = cSignal[randomSignal];
-    console.log('computer choice: ', computerChoice);
 
     showResult();
 }
@@ -62,6 +63,15 @@ function showResult() {
     result.innerHTML = win;
 }
 
+function resetFunction() {
+    choices.classList.remove('active');
+    buttons.forEach((button) => button.classList.remove("active"));
+    playerPoints = 0;
+    computerPoints = 0;
+    startGame();
+}
+
 buttons.forEach(button => 
     button.addEventListener('click', pSelect)
 );
+resetGame.addEventListener('click', resetFunction);
